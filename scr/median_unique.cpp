@@ -61,7 +61,7 @@ int main()
 		i++;
 	}
 
-	float median_unique[3] = { 0 };//get the median of the set of unique words per tweet 
+	double median_unique[3] = { 0 };//get the median of the set of unique words per tweet 
 	median_unique[0] = uni_nums[0];
 	for (i = 1; i < 3; i++){
 		median_unique[i] = (median_unique[i - 1]*i + uni_nums[i])/(i+1);
@@ -70,7 +70,7 @@ int main()
 	ofile.open("tweet_output/ft2.txt");
 	ofile << "median_unique" << endl;
 	for (m = 0; m < 3; m++){
-		ofile  << median_unique[m] << endl;
+		ofile  << setiosflags(ios∷fixed)<<setprecision(2)<<median_unique[m] << endl;
 	}
 	ofile.close();
 	return 0;
