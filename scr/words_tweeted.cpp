@@ -6,8 +6,8 @@
 
 using namespace std;
 
-void main(){
-	ifstream ifile("tweet_input\\tweets.txt");//read words from tweets.txt
+int main(){
+	ifstream ifile("tweet_input/tweets.txt");//read words from tweets.txt
 	if (!ifile){
 		cout << "fail to open file " << endl;
 		exit(0);
@@ -54,10 +54,11 @@ void main(){
 	}
 
 	ofstream ofile;     //save the result in ft1.txt
-	ofile.open("tweet_output\\ft1.txt");
+	ofile.open("tweet_output/ft1.txt");
 	ofile << "words tweeted"<<endl;
 	for (a = 0; a < size; a++){
 		ofile << setw(25) << data[a] << setw(10) << pnum[a] << endl;
 	}
 	ofile.close();
+	return 0;
 }
