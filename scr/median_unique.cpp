@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <iomanip> 
 using namespace std;
 typedef vector<vector<string> > vvs;
 
@@ -70,7 +71,7 @@ int main()
 	ofile.open("tweet_output/ft2.txt");
 	ofile << "median_unique" << endl;
 	for (m = 0; m < 3; m++){
-		ofile  << setiosflags(ios∷fixed)<<setprecision(2)<<median_unique[m] << endl;
+		ofile  << setiosflags(ios::fixed)<<setprecision(2)<<median_unique[m] << endl;
 	}
 	ofile.close();
 	return 0;
