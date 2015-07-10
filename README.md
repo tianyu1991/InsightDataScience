@@ -1,7 +1,10 @@
 # InsightDataScience
-object: 1.count the words frequency in tweets
 
-        2. get the means of the set of unique words per tweet,measure how this mean change with the set of unique words increase
+#object#
+
+1. counting the words frequency in tweets
+
+2. getting the means of the set of unique words per tweet,measure how this mean change with the set of unique words increase
 
 environment:MAC
 
@@ -11,6 +14,7 @@ compiler: g++
 
 No external library or dependency is used.
 
+#Directories#
 tweet_input: the tweets used in this project
 
 tweet_output:the result of the project,containing two txt documents:ft1,ft2
