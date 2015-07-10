@@ -5,9 +5,9 @@
 using namespace std;
 typedef vector<vector<string> > vvs;
 
-void main()
+int main()
 {
-	ifstream infile("tweet_input\\tweets.txt");
+	ifstream infile("tweet_input/tweets.txt");
 	infile >> noskipws;
 	int nums[3] = { 0 };//figure out how many words in each tweet
 	int i=0;
@@ -34,7 +34,7 @@ void main()
 	words.resize(3);
 	for (m = 0; m < 3; m++)		words[m].resize(nums[m]);
 
-	ifstream infile2("tweet_input\\tweets.txt"); //read words from tweets.txt
+	ifstream infile2("tweet_input/tweets.txt"); //read words from tweets.txt
 	int num= 0;
 	string str;
 	for (i = 0; i < 3;i++){            
@@ -67,10 +67,11 @@ void main()
 		median_unique[i] = (median_unique[i - 1]*i + uni_nums[i])/(i+1);
 	}
 	ofstream ofile; //save the result in ft2.txt
-	ofile.open("tweet_output\\ft2.txt");
+	ofile.open("tweet_output/ft2.txt");
 	ofile << "median_unique" << endl;
 	for (m = 0; m < 3; m++){
 		ofile  << median_unique[m] << endl;
 	}
 	ofile.close();
+	return 0;
 }
